@@ -18,7 +18,16 @@ module.exports = {
     plugins: [
         new CopyWebpackPlugin([{
             from: './src/index.html'
-        }])
+        }]),
+        new webpack.LoaderOptionsPlugin({
+            minimize: true,
+            debug: false
+        }),
+        new webpack.EnvironmentPlugin({
+            NODE_ENV: 'production',
+            DEBUG: false
+        }),
+        new webpack.optimize.ModuleConcatenationPlugin()
     ],
     output: {
         path: __dirname + '/dist',
