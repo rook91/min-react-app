@@ -4,9 +4,11 @@
   "description": "minimal react app",
   "main": "index.js",
   "scripts": {
-    "analyze": "npm run analyze:webpack && npm run analyze:results",
+    "analyzeReact": "npm run analyze:webpack && npm run analyze:resultsReact",
+    "analyzePreact": "npm run analyze:webpack && npm run analyze:resultsPreact",
     "analyze:webpack": "webpack -p --json --progress --profile > webpack-build-log.json",
-    "analyze:results": "webpack-bundle-analyzer webpack-build-log.json dist/bundle",
+    "analyze:resultsReact": "webpack-bundle-analyzer webpack-build-log.json distReact",
+    "analyze:resultsPreact": "webpack-bundle-analyzer webpack-build-log.json distPreact",
     "dist": "webpack -p"
   },
   "repository": {
