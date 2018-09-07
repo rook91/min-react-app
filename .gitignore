@@ -1,4 +1,5 @@
 .idea
-dist
+distReact
+distPreact
 node_modules
 webpack-build-log.json
